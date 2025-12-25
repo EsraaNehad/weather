@@ -2,9 +2,11 @@ const searchInput = document.querySelector(".search input");
 const searchButton = document.getElementById("searchbutton");
 const carouselInner = document.querySelector(".carousel-inner");
 
+const proxy = 'https://cors-anywhere.herokuapp.com/'; // Proxy مؤقت
+
 async function getWeather(city = "Egypt") {
   try {
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=78afdeadba63468c957163718252608&q=${city}&days=3&aqi=no&alerts=no`;
+    const url = `${proxy}http://api.weatherapi.com/v1/forecast.json?key=78afdeadba63468c957163718252608&q=${city}&days=3&aqi=no&alerts=no`;
     const response = await fetch(url);
     const data = await response.json();
 
@@ -48,5 +50,6 @@ searchButton.addEventListener("click", () => {
     getWeather(city);
   }
 });
+
 
 getWeather();
