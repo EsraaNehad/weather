@@ -1,0 +1,29 @@
+
+.search-section input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.weather-section .card {
+  border-radius: 15px;
+  margin: auto;
+  max-width: 300px;
+}
+  body {
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../images/blue-sky-with-light-clouds-windy-weather_252085-35364.jpg");
+  background-size: cover;
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.fa-cloud {
+  animation: float 3s ease-in-out infinite;
+}
+
+
+
